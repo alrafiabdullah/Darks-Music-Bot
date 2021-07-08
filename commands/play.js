@@ -23,7 +23,7 @@ module.exports = {
 
         //If the user has used the play command
         if (cmd === 'play') {
-            if (!args.length) return message.channel.send('You need to send the second argument!');
+            if (!args.length) return message.channel.send('Please add a YouTube URL or Title!');
             let song = {};
 
             //If the first argument is a link. Set the song object to have two keys. Title and URl.
@@ -128,6 +128,9 @@ const skip_song = (message, server_queue) => {
 
 const stop_song = (message, server_queue) => {
     if (!message.member.voice.channel) return message.channel.send('You need to be in a channel to execute this command!');
+    if (!server_queue) {
+        return message.channel.send(`There are no songs in queue 😔`);
+    }
     server_queue.songs = [];
     server_queue.connection.dispatcher.end();
 };
