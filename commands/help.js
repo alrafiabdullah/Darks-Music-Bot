@@ -12,7 +12,6 @@ module.exports = {
                 { name: "play", value: "Plays a song from YouTube. Add URL or Title.", inline: true },
                 { name: "skip", value: "Skips the current song", inline: true },
                 { name: "stop", value: "Stops the song queue", inline: true },
-                { name: "leave", value: "Leaves the server", inline: true },
             )
             .setThumbnail(message.member.user.avatarURL() !== null ? message.member.user.avatarURL() : message.member.user.defaultAvatarURL)
             .setFooter(`Requested by: ${message.member.displayName}`);

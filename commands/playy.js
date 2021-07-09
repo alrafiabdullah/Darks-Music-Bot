@@ -2,7 +2,7 @@ const ytdl = require("ytdl-core");
 const ytSearch = require("yt-search");
 
 module.exports = {
-    name: "playy",
+    name: "gn;ldkfsgjh;ldsg",
     description: "This is a play command",
     async execute(message, args, client, Discord) {
         const voiceChannel = message.member.voice.channel;

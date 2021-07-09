@@ -1,5 +1,5 @@
 module.exports = {
-    name: "leave",
+    name: "aflahjsfkl",
     description: "This is a leave command",
     async execute(message, args, cmd, client, Discord) {
         const voiceChannel = message.member.voice.channel;
