@@ -51,11 +51,17 @@ client.on("message", (message) => {
         command.execute(message, args, cmd, client, Discord);
     } catch (error) {
         const errorEmbed = new Discord.MessageEmbed()
-            .setColor("#dc143c")
-            .setTitle("Error!!!")
+            .setTitle("Help Message")
+            .setDescription("All the commands of Dark's Music Bot! Please add % beforehand.")
+            .addFields(
+                { name: "ping", value: "Shows shard connection time", inline: true },
+                { name: "help", value: "Shows this message", inline: true },
+                { name: "play", value: "Plays a song from YouTube. Add URL or Title.", inline: true },
+                { name: "skip", value: "Skips the current song", inline: true },
+                { name: "stop", value: "Stops the song queue", inline: true },
+            )
             .setThumbnail("https://www.freeiconspng.com/uploads/shiny-metal-red-error-image-designs-1.png")
-            .setDescription("There's an error occurred from the server side!")
-            .setFooter("Plese contact DarkRafe#2367. Thank you.");
+            .setFooter(`Requested by: ${message.member.displayName}`);
         message.channel.send(errorEmbed);
 
     }
