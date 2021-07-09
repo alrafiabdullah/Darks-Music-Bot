@@ -51,8 +51,9 @@ client.on("message", (message) => {
         command.execute(message, args, cmd, client, Discord);
     } catch (error) {
         const errorEmbed = new Discord.MessageEmbed()
+            .setColor("#dc143c")
             .setTitle("Help Message")
-            .setDescription("All the commands of Dark's Music Bot! Please add % beforehand.")
+            .setDescription("Please add % and try any of these commands. If the problem persists contact DarkRafe#2367.")
             .addFields(
                 { name: "ping", value: "Shows shard connection time", inline: true },
                 { name: "help", value: "Shows this message", inline: true },
